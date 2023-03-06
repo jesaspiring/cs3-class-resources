@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //Will rewrite this one
+
+        /**
+         * JavaScript Operators
+         * 
+         * 1. Arithmetic Operators (+, -, *, /, %)
+         * 2. Comparison Operators (>, <, ==, ===, !==, <=, >=)
+         * 3. Logical Operators (AND [&&], OR [||], NOT [!])
+         * 4. Assignment Operators (*=, -=, +=, /=, ++, --)
+         * 5. Ternary Operators (?, :)
+         * 
+        */
+
+        var num1 = 5;
+        var num2 = 10;
+        var num3 = "5";
+
+        // 1. Arithmetic Operators
+        var r1 = num1 * num2;
+        //document.write(r2);
+
+        // 2. Comparison Operators 
+        //document.write(num2 === num3);
+
+        // 3. Logical Operators
+        /**
+         * AND
+         * [T][T]=[T]
+         * [T][F]=[F]
+         * [F][F]=[F]
+         * 
+         * OR
+         * [T][T]=[T]
+         * [T][F]=[T]
+         * [F][F]=[F]
+         * 
+         * NOT
+         * [F]=[T]
+         * [T]=[F]
+         * 
+        */
+
+        //AND
+        //document.write(num1 < num2 && num2 < num1);
+        //OR
+        //document.write(num1 == num2 || num2 > num1);
+        //NOT
+        //document.write(!(num1 > num2));
+
+
+        //4. Assignment Operator
+
+        // var number = 2;
+
+        // for(var i = 0; i <= 10; i++){
+        //     number *= 2;
+        //     document.write(number + "<br>");
+        // }
+
+
+        // 5. Ternary Operator
+        var sleepy = true;
+        var inClass = true;
+
+        // if(sleepy && inClass){
+        //     document.write("Wake Up");
+        // }
+        // else if(sleepy && !inClass){
+        //     document.write("Sleep")
+        // }
+        // else{
+        //     document.write("Very Good");
+        // }
+
+        // ? :
+
+        var output = (sleepy && inClass) ? document.write("Wake Up") : document.write("Very Good");
+
+        document.write(output);
+
+    </script>
+</body>
+</html>
