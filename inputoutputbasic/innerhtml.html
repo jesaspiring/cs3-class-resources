@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.innerHTML</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter your name" id="txtInput" />
+    <br />
+    <br />
+    <!--
+    Clicking the button invoke the onclick function and will trigger 
+    the function displayName() which should change the content of h1
+    -->
+    <button onclick="displayName()">Click to view result</button>
+
+    <h1 id="display">This text will change when you click the button</h1>
+
+    <script>
+      /**
+       * The innerHTML property
+       *
+       * this property allows you to get and change the
+       * HTML content of an element. One way to output/display
+       * things in JavaScript
+       *
+       */
+
+      var input = document.getElementById("txtInput");
+
+      function displayName() {
+        //get the id of h1 element and change the current content with
+        //your name you entered on the text field using innerHTML
+        document.getElementById("display").innerHTML = input.value; //assigned the content of h1 to the value of text field
+      }
+    </script>
+  </body>
+</html>

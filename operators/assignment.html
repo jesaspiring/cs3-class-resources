@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assginment Operators</title>
+  </head>
+  <body>
+    <script>
+
+      /**
+       * Assignment Operators (*=, -=, +=, /=, ++, --)
+       */
+
+      // Multiply the given variable by 2 until the for-loop finishes
+
+      var num = 1;
+
+      for (var i = 0; i < 20; i++) {
+        num *= 2;
+        document.write(num + "<br/>");
+      }
+
+      document.write("====================" + "<br/>");
+
+      /**
+       * Example of pre increment (++i) vs post increment
+      */
+
+      document.write("Example of post and pre increment" + "<br/>");
+      var x = 5;
+      var y = ++x;
+      document.write("Pre increment: " + y);
+      document.write("<br/>");
+
+      var j = 5;
+      var k = j++;
+      document.write("Post increment: " + k);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparison and Logical Operators</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * Comparison Operators (>, <, ==, ===, !==, <=, >=)
+       * Logical Operators (AND [&&], OR [||], NOT [!])
+       *
+       * Truth table
+       *
+       * AND
+       * [T][T]=[T]
+       * [T][F]=[F]
+       * [F][F]=[F]
+       *
+       * OR
+       * [T][T]=[T]
+       * [T][F]=[T]
+       * [F][F]=[F]
+       *
+       * NOT
+       * [F]=[T]
+       * [T]=[F]
+       *
+       */
+
+      /**
+       * Sample App
+       *
+       * Basic storm warning signal app
+       * user will input the wind speed and your app will return the
+       * storm signal equivalent
+       */
+
+      /**
+       * Tropical Cyclone Categories
+       *
+       * 61km/h or less - Tropical Depression
+       * 62-88km/h - Tropical Storm
+       * 89-117km/h - Severe Tropical Storm
+       * 118-184km/h - Typhoon
+       * 185km/h up - Super Typhoon
+       */
+
+      var windSpeed = prompt("Enter wind speed");
+      var cycloneCategory;
+
+
+      while(windSpeed < 0){
+        windSpeed = prompt("Enter a non negative number");
+      }
+
+      if (windSpeed <= 61) {
+        cycloneCategory = "Tropical Depression";
+      } else if (windSpeed >= 62 && windSpeed <= 88) {
+        cycloneCategory = "Tropical Storm";
+      } else if (windSpeed >= 89 && windSpeed <= 117) {
+        cycloneCategory = "Severe Tropical Storm";
+      } else if (windSpeed >= 118 && windSpeed <= 184) {
+        cycloneCategory = "Typhoon";
+      } else {
+        cycloneCategory = "Super Typhoon";
+      }
+
+      document.write(`Given the wind speed of ${windSpeed} km/h, 
+                      the Tropical Cyclone Category is <b>${cycloneCategory}</b>`);
+    </script>
+  </body>
+</html>
