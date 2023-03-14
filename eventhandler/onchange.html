@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onclick other implementation</title>
+  </head>
+  <body>
+    <!--
+        Summary:
+        1. Simple App performing 4 basic arithmetic operations
+        2. Using onchange event handler
+        3. Used of <select> tag (dropdown)
+    -->
+
+    <label>First Number:</label>
+    <input type="text" placeholder="Enter first number" id="txtFirstNumber" />
+    <br />
+    <label>Second Number:</label>
+    <input type="text" placeholder="Enter second number" id="txtSecondNumber" />
+    <br />
+    <br />
+    <label>Operation to perform:</label>
+
+    <!-- Select tag or dropdown in html -->
+    <select id="operations">
+      <option disabled selected>Choose option</option>
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+
+    <!-- h1 tag to display our output -->
+    <h1 id="display">Result will be displayed on this tag</h1>
+
+    <script>
+      /*
+        Things to do:
+        1. Declare variables
+        2. Assign HTML elements to variables
+        3. Creating your function (function located at the bottom)
+        4. Onchange function to handle values
+       */
+
+      // Declare needed variables
+      let firstNumber, secondNumber, option, result, functionValue;
+
+      /*
+        Assigning our HTML elements to the variables declared above
+        Accessing our HTML elements using getElementById.
+       
+        document.getElementById() is used to:
+        1. read/edit an html element
+        2. get the values returned by the element
+      
+        In the code below, we'll only assign our html element
+        to our variables. No values are being read yet.
+       */
+      firstNumber = document.getElementById("txtFirstNumber"); // first text box
+      secondNumber = document.getElementById("txtSecondNumber"); // second text box
+      option = document.getElementById("operations"); // dropdown or select tag
+      result = document.getElementById("display"); // h1 tag
+
+      /*
+        Firing the event handler onchange
+       
+        onchange even occurs when the value of an HTML element is changed
+       */
+      option.onchange = function () {
+        /*
+         this time, get the value of the element by using .value (textbox value)
+         parse the variables to change from string -> integer
+        */
+        let parseNum1 = parseInt(firstNumber.value);
+        let parseNum2 = parseInt(secondNumber.value);
+
+        /*
+         calling our function by typing the function and providing or passing the needed arguments
+         assigning the value returned by the function to our variable functionValue (declared above)
+        */
+        functionValue = solve(parseNum1, parseNum2, option.value);
+
+        // displaying the result in h1 by changing its content using innerHTML
+        result.innerHTML = functionValue;
+      };
+
+      /*
+        Creating our function to perform and return values
+        depending on the choice selected from our dropdown tag
+       
+        first parameter is for our number 1
+        second parameter is for our number 2
+        third parameter is for our arithmetic operation
+       */
+      function solve(num1, num2, operation) {
+        let result, resultType; // result type for the type of values returned depending on the operation
+
+        if (operation == "add") {
+          result = num1 + num2;
+          resultType = "sum";
+        }
+        if (operation == "subtract") {
+          result = num1 - num2;
+          resultType = "difference";
+        }
+        if (operation == "multiply") {
+          result = num1 * num2;
+          resultType = "product";
+        }
+        if (operation == "divide") {
+          result = num1 / num2;
+          resultType = "quotient";
+        }
+
+        // using template literals to show our result
+        let displayResult = `The ${resultType} of ${num1} and ${num2} is ${result}`;
+
+        /*
+          the above template literal is equivalent to:
+          let displayResult = "The " + resultType + " of " + num1 + " and " + num2 + " is " + result;
+        */
+
+        return displayResult; // returning the value/output of this function
+      }
+    </script>
+  </body>
+</html>
