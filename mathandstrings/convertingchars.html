@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="userInput" onkeyup="convertCharacters()" rows="10" cols="120" placeholder="Write your thoughts"></textarea>
+    <p id="result"></p>
+
+    <script>
+      function convertCharacters() {
+        let message = document.getElementById("userInput").value;
+
+        for (let i = 0; i < message.length; i++) {
+          if (message[i].toLowerCase() == "e") {
+            message = message.replace(message[i], 3);
+          } else if (message[i].toLowerCase() == "a") {
+            message = message.replace(message[i], 4);
+          } else if (message[i].toLowerCase() == "i") {
+            message = message.replace(message[i], 1);
+          } else if (message[i].toLowerCase() == "o") {
+            message = message.replace(message[i], 0);
+          } else if (message[i].toLowerCase() == "s") {
+            message = message.replace(message[i], 5);
+          }
+        }
+
+        document.getElementById("result").innerHTML = message;
+      }
+      document.write(`J3j3m0n v3rs10n: ${message}`);
+    </script>
+  </body>
+</html>

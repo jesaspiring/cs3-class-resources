@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a" placeholder="Enter a"></br>
+    <input type="text" id="b" placeholder="Enter b"></br>
+    <input type="text" id="c" placeholder="Enter c"></br>
+    <button id="calculate">Calculate</button></br>
+
+    <h1 id="result"></h1>
+
+    
+    <script>
+        let a = document.getElementById("a");
+        let b = document.getElementById("b");
+        let c = document.getElementById("c");
+
+        document.getElementById("calculate").onclick = function(){
+            document.getElementById("result").innerHTML = 
+            calculate(Number(a.value), Number(b.value), Number(c.value));
+        }
+
+        function calculate(a, b, c){
+            let x1, x2, result;
+            let d = Math.pow(b, 2) - (4 * a * c); //discriminant
+
+            if(d > 0){
+                x1 = (-b + Math.sqrt(d)) / (2 * a);
+                x2 = (-b - Math.sqrt(d)) / (2 * a);
+
+                result = `x: ${x1} </br> X: ${x2}`; //using template literal to output format
+            }
+            else if(d < 0){
+                x1 = -b/(2*a);
+                x2 = Math.sqrt(Math.abs(d)) / (2 * a);
+
+                result = `x: ${x1} + ${x2}i </br>
+                          x: ${x1} - ${x2}i `
+            }
+            else if(d == 0){
+                x1 = -b/(2*a); //you can also use variable x2
+
+                result = `x: ${x1}`;
+            }
+
+            return result;
+        }
+        
+    </script>
+</body>
+</html>
