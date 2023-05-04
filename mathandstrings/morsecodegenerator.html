@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit="return generate()">
+    <fieldset>
+      <legend>Morse Code Generator</legend>
+      <label>Enter word</label><br />
+      <input type="text" placeholder="enter code" id="userInput"/>
+      <input type="submit" value="Generate Code" />
+    </fieldset>
+  </form>
+
+  <br />
+
+  <h1 id="result"></h1>
+
+  <script>
+
+    let morseCode = "";
+
+    function generate() {
+      let userInput = document.getElementById("userInput").value.toLowerCase();
+      let code = " ";
+      let i = 0;
+
+      while (i < userInput.length) {
+        if (userInput[i] == "a") {
+          code = ".-";
+        } else if (userInput[i] == "b") {
+          code = "-...";
+        } else if (userInput[i] == "c") {
+          code = "-.-.";
+        } else if (userInput[i] == "d") {
+          code = "-..";
+        } else if (userInput[i] == "e") {
+          code = ".";
+        } else if (userInput[i] == "f") {
+          code = "..-.";
+        } else if (userInput[i] == "g") {
+          code = "--.";
+        } else if (userInput[i] == "h") {
+          code = "....";
+        } else if (userInput[i] == "i") {
+          code = "..";
+        } else if (userInput[i] == "j") {
+          code = ".---";
+        } else if (userInput[i] == "k") {
+          code = "-.-";
+        } else if (userInput[i] == "l") {
+          code = ".-..";
+        } else if (userInput[i] == "m") {
+          code = "--";
+        } else if (userInput[i] == "n") {
+          code = "-.";
+        } else if (userInput[i] == "o") {
+          code = "---";
+        } else if (userInput[i] == "p") {
+          code = ".--.";
+        } else if (userInput[i] == "q") {
+          code = "--.-";
+        } else if (userInput[i] == "r") {
+          code = ".-.";
+        } else if (userInput[i] == "s") {
+          code = "...";
+        } else if (userInput[i] == "t") {
+          code = "-";
+        } else if (userInput[i] == "u") {
+          code = "..-";
+        } else if (userInput[i] == "v") {
+          code = "...-";
+        } else if (userInput[i] == "w") {
+          code = ".--";
+        } else if (userInput[i] == "x") {
+          code = "-..-";
+        } else if (userInput[i] == "y") {
+          code = "-.--";
+        } else if (userInput[i] == "z") {
+          code = "--..";
+        }
+        else if(userInput[i] == " "){
+          code = " ";
+        }
+
+        morseCode += " " + code; // put space in between codes
+
+        i++;
+      }
+
+      document.getElementById("result").innerHTML = morseCode;
+
+      return false;
+    }
+
+  </script>
+</body>
+
+</html>
