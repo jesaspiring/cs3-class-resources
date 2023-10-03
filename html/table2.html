@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Part 2</title>
+
+    <style>
+        /* This style of styling is called Embedded Styling or CSS */
+
+        /*
+        Selectors
+        element selector
+        class selector
+        id selector
+        */
+
+        /* Using Element Selector */
+        table {
+            border-collapse: collapse;
+        }
+
+        table {
+            font-size: x-large;
+        }
+
+        table,
+        td {
+            border: 1px solid black;
+        }
+
+        td {
+            /* padding or spacing */
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+
+        <!-- Adding title to our table -->
+        <caption>Inventory List</caption>
+
+        <!-- Styling group of columns -->
+        <!-- Make sure to declare first the colgroup element before declaring the col element. Place the col element inside the colgroup element-->
+        <colgroup>
+            <col span="2" style="background-color:yellow">
+            <col style="background-color:fuchsia;">
+            <col>
+            <col span="2" style="background-color: red;">
+        </colgroup>
+
+
+        <!-- 
+            Or without using the element col, you can implement the above example using multiple declaration of colgroup
+            (but not advisable) 
+        -->
+
+        <!-- Example of implementing the sample above but using only colgroup element (Delete the comment to try) -->
+        <!-- 
+        <colgroup  span="2" style="background-color:yellow"></colgroup>
+        <colgroup  style="background-color:fuchsia;"></colgroup>
+        <colgroup></colgroup>
+        <colgroup span="2" style="background-color: red;"></colgroup> 
+        -->
+
+        <tr>
+            <!-- This td is styled using inline styling -->
+            <!-- This td shows what we call merging of cells using the attribute colspan -->
+            <!-- The value inside the colspan corresponds to the number of cells you want to combine/span -->
+            <td colspan="6" style="text-align: center; background-color: white; font-weight: bold; font-size: xx-large">
+                Beverages
+            </td>
+        </tr>
+        <tr>
+            <th>Item No.</td>
+            <th>Item</td>
+            <th>Price</td>
+            <th>Quantity</td>
+            <th>MFG</td>
+            <th>EXP</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Coke Insakto</td>
+            <td>15.99</td>
+            <td>100</td>
+            <td>Yesterday</td>
+            <td>Today</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sprite</td>
+            <td>15.09</td>
+            <td>50</td>
+            <td>Last Month</td>
+            <td>Next Month</td>
+        </tr>
+    </table>
+</body>
+
+</html>
