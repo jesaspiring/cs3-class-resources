@@ -19,7 +19,7 @@ https://git-scm.com
 Configure user information for all local repositories
 
 > **$ git config --global user.name "[name]"**
-<br>
+>
 > Sets the name you want to attached to your commit transactions
 <br>
 
