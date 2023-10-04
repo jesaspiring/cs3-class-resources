@@ -26,11 +26,12 @@ Configure user information for all local repositories
 **Usage example:**
 <br>
 git config user.name "user"
+
 <br>
 
 > **$ git config --global user.email "[name]"**
-<br>
-Sets the email you want to attached to your commit transactions
+>
+>Sets the email you want to attached to your commit transactions
 <br>
 
 **Usage example:**
