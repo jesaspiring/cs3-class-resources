@@ -14,6 +14,7 @@ https://git-scm.com
 
 <br>
 
+
 ## Configuring git
 Configure user information for all local repositories
 
@@ -35,6 +36,7 @@ git config user.email "user@gmail.com"
 
 <br>
 
+
 ## Create repositories
 **Note:** Make sure you're in the folder you want initialize a repository.
 
@@ -53,6 +55,7 @@ $ git clone https://github.com/jesaspiring/cs3-class-resources
 
 <br>
 
+
 ## Adding remote branch/repository
 Adding repository after initializing a new local git repository and a newly created remote repository in Github.com
 
@@ -65,6 +68,7 @@ Create a new connection record to a remote repository in Github.com
 $ git remote add origin https://github.com/jesaspiring/cs3-class-resources 
 
 <br>
+
 
 ## Make Changes
 
@@ -89,6 +93,7 @@ $ git add index.html
 Records file snapshots permanently in version history
 
 <br>
+
 
 ## Synchronize changes
 Synchronize your local repository with the remote repository in Github,com
