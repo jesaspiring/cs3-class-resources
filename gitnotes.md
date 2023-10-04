@@ -79,19 +79,20 @@ $ git remote add origin https://github.com/jesaspiring/cs3-class-resources
 
 > **$ git add [File]**
 >
->Snapshots the file in preparation for version (before commit)
+> Snapshots the file in preparation for version (before commit)
 <br>
 
 **Usage example**
 <br>
 1. Adding all files
-<br>
-$ git add .
+
+    $ git add .
 
 2. Adding specific file
-<br>
-$ git add index.html
 
+    $ git add index.html
+
+<br>
 
 > **$ git commit -m "[descriptive message]"**
 >
