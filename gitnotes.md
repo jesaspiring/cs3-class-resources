@@ -23,9 +23,9 @@ Configure user information for all local repositories
 > Sets the name you want to attached to your commit transactions
 <br>
 
-**Usage example:**
+**Example:**
 <br>
-$ git config user.name "user"
+`$ git config user.name "user"`
 
 <br>
 
@@ -34,9 +34,9 @@ $ git config user.name "user"
 >Sets the email you want to attached to your commit transactions
 <br>
 
-**Usage example:**
+**Example:**
 <br>
-$ git config user.email "user@gmail.com"
+`$ git config user.email "user@gmail.com"`
 
 <br>
 
@@ -53,9 +53,9 @@ $ git config user.email "user@gmail.com"
 >Clone (download) a repository that already exists on github
 <br>
 
-**git clone usage example:** 
+**Example:**
 <br>
-$ git clone https://github.com/jesaspiring/cs3-class-resources
+`$ git clone https://github.com/jesaspiring/cs3-class-resources`
 
 <br>
 
@@ -68,9 +68,9 @@ Adding repository after initializing a new local git repository and a newly crea
 > Create a new connection record to a remote repository in Github.com
 <br>
 
-**git remote usage example:**
+**Example:**
 <br>
-$ git remote add origin https://github.com/jesaspiring/cs3-class-resources 
+`$ git remote add origin https://github.com/jesaspiring/cs3-class-resources` 
 
 <br>
 
@@ -82,21 +82,26 @@ $ git remote add origin https://github.com/jesaspiring/cs3-class-resources
 > Snapshots the file in preparation for version (before commit)
 <br>
 
-**Usage example**
-<br>
+**Example:**
 1. Adding all files
 
-    $ git add .
+    `$ git add .`
 
 2. Adding specific file
 
-    $ git add index.html
+    `$ git add index.html`
 
 <br>
 
 > **$ git commit -m "[descriptive message]"**
 >
 > Records file snapshots permanently in version history
+<br>
+
+**Example:**
+<br>
+`$ git commit -m "first commit"`
+
 <br>
 
 
