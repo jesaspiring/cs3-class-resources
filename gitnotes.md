@@ -25,7 +25,7 @@ Configure user information for all local repositories
 
 **Usage example:**
 <br>
-git config user.name "user"
+$ git config user.name "user"
 
 <br>
 
@@ -45,14 +45,14 @@ $ git config user.email "user@gmail.com"
 **Note:** Make sure you're in the folder you want initialize a repository.
 
 > **$ git init**
-<br>
-Turn an existing directory into a git repository
+>
+> Turn an existing directory into a git repository
 
 > **$ git clone [url]** 
-<br>
-Clone (download) a repository that already exists on github
-<br>
 >
+>Clone (download) a repository that already exists on github
+<br>
+
 **git clone usage example:** 
 <br>
 $ git clone https://github.com/jesaspiring/cs3-class-resources
@@ -64,9 +64,10 @@ $ git clone https://github.com/jesaspiring/cs3-class-resources
 Adding repository after initializing a new local git repository and a newly created remote repository in Github.com
 
 > **$ git remote add [name] [url]**
-<br>
-Create a new connection record to a remote repository in Github.com
 >
+> Create a new connection record to a remote repository in Github.com
+<br>
+
 **git remote usage example:**
 <br>
 $ git remote add origin https://github.com/jesaspiring/cs3-class-resources 
@@ -77,10 +78,10 @@ $ git remote add origin https://github.com/jesaspiring/cs3-class-resources
 ## Make Changes
 
 > **$ git add [File]**
-<br>
-Snapshots the file in preparation for version (before commit)
-<br>
 >
+>Snapshots the file in preparation for version (before commit)
+<br>
+
 **Usage example**
 <br>
 1. Adding all files
@@ -93,9 +94,8 @@ $ git add index.html
 
 
 > **$ git commit -m "[descriptive message]"**
-<br>
-Records file snapshots permanently in version history
-
+>
+> Records file snapshots permanently in version history
 <br>
 
 
@@ -105,20 +105,20 @@ Synchronize your local repository with the remote repository in Github,com
 <br>
 
 > **$ git fetch**
-<br>
-Downloads all history from remote tracking branches
+>
+> Downloads all history from remote tracking branches
 
 > **$ git merge**
-<br>
-Combines remote tracking branch into current local branch
+>
+> Combines remote tracking branch into current local branch
 
 > **$ git push**
-<br>
-Uploads all local branch commits to Github
+>
+>Uploads all local branch commits to Github
 
 > **$ git pull**
-<br>
-Updates current local working branch with all new commits from corresponding remote branch. It is a combination of `git fetch` and `git merge`
+>
+>Updates current local working branch with all new commits from corresponding remote branch. It is a combination of `git fetch` and `git merge`
 
 <br>
 
