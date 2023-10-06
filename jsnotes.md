@@ -26,6 +26,5 @@
 
 + A JavaScript identifier usually starts with a letter, underscore (_), or dollar sign ($). Subsequent characters can also be digits (0 – 9). Because JavaScript is case sensitive, letters include the characters A through Z (uppercase) as well as a through z (lowercase).
 
-    Example of legal variable names:
-
-    `Number_hits`, `temp99`, `$credit`, and `_name`.
+    **Example of legal variable names:**  
+    `Number_hits`, `temp99`, `$credit`, and `_name`
