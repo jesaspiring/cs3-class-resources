@@ -1,3 +1,3 @@
-# cs3-class-resources
+# CS3 Class Resources
 
-> This repository contains the sample codes discussed in CS3 Class (Client-Side Web Development).
+This repository contains summarized examples discussed in the CS3 (Client-Side Web Development) class.
