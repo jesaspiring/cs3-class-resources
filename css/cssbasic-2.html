@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other more selectors</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+        }
+
+        html {
+            background-color: gray;
+        }
+
+        /* Element Selector */
+        div {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul li {
+            padding: 5px
+        }
+
+        ul {
+            text-align: left;
+            list-style-position: inside;
+        }
+
+        /* Class Selector */
+        .header {
+            color: purple;
+            text-align: center;
+        }
+
+        .coverage {
+            background-color: aqua;
+            text-align: center;
+            width: 80%;
+            margin: auto;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: azure;
+            bottom: 0;
+            margin: 0;
+            padding: 5px;
+        }
+
+        /* Id Selector */
+        #sub-header {
+            color: cornsilk;
+            background-color: brown;
+        }
+
+        /* Group Selector */
+        h2,
+        p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Descendant Selector */
+        div.div-header p:first-of-type { 
+            /*[Sidenote] :first-of-type means selecting the first element of it's parent div*/
+
+            font-style: italic;
+        }
+
+        div.coverage li {
+            font-style: italic;
+        }
+
+        /* Child Selector */
+        div.coverage>li {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header div-header" style="background-color: rgb(101, 220, 101);">
+        <h1>Hello Quarter Exam!</h1>
+        <p id="sub-header">I'm not prepared</p>
+        <p>October 25-27, 2023</p>
+    </div>
+
+    <div class="coverage">
+        <h3>CS3 LG Coverage</h3>
+        <p>Please study the following topic</p>
+        <ul>
+            <li>5.0 - Introduction to CSS</li>
+            <li>5.1 - Selectors and Basic Syntax </li>
+            <li>5.2 - Types of CSS</li>
+            <li>5.3 - Selectors and Basic Syntax</li>
+            <li>5.4 - Properties</li>
+            <li>5.5 - Properties (Font, Text, Background), Box Model</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>The end</p>
+    </div>
+</body>
+
+</html>
