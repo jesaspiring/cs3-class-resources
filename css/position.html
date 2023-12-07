@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properties</title>
+
+    <style>
+        nav {
+            background-color: darkolivegreen;
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline-block;
+            line-height: 12px;
+
+        }
+
+        li a {
+            text-decoration: none;
+            padding: 0 5px;
+            font-size: 2em;
+            color: wheat
+        }
+
+        .first-box {
+            text-align: center;
+            background: blue;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .second-box {
+            text-align: center;
+            background: red;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            position: relative;
+            left: 50%;
+            z-index: 2;
+        }
+
+        .third-box {
+            text-align: center;
+            background: green;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .fixed {
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+        }
+
+        .fixed p {
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+        footer {
+            color: white;
+            padding: 10px;
+            background-color: brown;
+            text-align: center;
+            position: sticky;
+            bottom: 0;
+        }
+
+
+        .main-container {
+            position: relative;
+            height: 4000px;
+        }
+
+
+        h1 {
+            font-size: 7rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">This</a></li>
+            <li><a href="#">Navbar</a></li>
+            <li><a href="#">is</a></li>
+            <li><a href="#">Sticky</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="first-box">
+            <h1>1</h1>
+        </div>
+        <div class="second-box">
+            <h1>2</h1>
+        </div>
+        <div class="third-box">
+            <h1>3</h1>
+        </div>
+
+        <div class="fixed">
+            <p>Scroll down to the bottom of the page</p>
+        </div>
+    </div>
+
+    <footer>
+        CSS Examples on Position Properties
+    </footer>
+</body>
+
+</html>

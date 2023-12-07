@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link States</title>
+
+    <style>
+        nav {
+            background-color:burlywood;
+            padding: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li a{
+            text-decoration: none;
+            padding: 0 40px;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        a:link{
+            color: brown;
+        }
+
+        a:visited{
+            color: peru;
+        }
+
+        a:hover{
+            background-color: white;
+            text-decoration: underline;
+        }
+
+        a:active{
+            background-color: chocolate;
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <!--
+        A pseudo-class is used to define a special state of an element.
+
+        Below are pseudo-class/state we use to style our links
+
+        1. a:link -  a normal, unvisited link
+        2. a:visited - a link the user has visited
+        3. a:hover - a link when the user mouses over it (hover over it)
+        4. a:active - a link the moment it is clicked 
+
+
+        Some notes: 
+        * to check how a:active behaves, long press the link
+        * When all link styles/state are present, there are order rules to follow:
+            * a:hover must come after a:link and a:visited
+            * a:active must come after a:hover
+
+            a:link
+            a:visited
+            a:hover
+            a:active
+    -->
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
