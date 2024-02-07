@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .running{
+           background: url('download.png') no-repeat;
+	       width: 60px;
+	       height: 128px;
+           /* animation-name: blinkingZy;
+           animation-duration: 1s;
+           animation-timing-function: steps(6);
+           animation-iteration-count: infinite; */
+           animation: blinkingPurpleThing 1s steps(10) infinite;
+        }
+
+        @keyframes blinkingPurpleThing {
+            /* from{
+                background-position-x: 0px;
+            } */
+            to{
+                background-position-x: -600px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="running"></div>
+</body>
+</html>
