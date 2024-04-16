@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        fieldset {
+            width: 400px;
+        }
+
+        input[type="text"] {
+            border-radius: 2%;
+            height: 20px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            font-size: large;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        button:hover {
+            background-color: brown;
+            color: white;
+        }
+
+        label{
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset style="float: left;">
+        <legend>Low cost twitter</legend>
+        <input type="date" id="txtDate"><br><br>
+        <input type="text" placeholder="Enter your name" id="txtName"><br>
+        <h2>What's on your mind?</h2>
+        <textarea id="txtUserThoughts" cols="30" rows="5"></textarea><br>
+        <h2>Select all emotions that applies</h2>
+        <input type="checkbox" name="cbEmotions[]" id="cbAngry" value="Angry">Angry <br>
+        <input type="checkbox" name="cbEmotions[]" id="cbEcstatic" value="Ecstatic">Ecstatic <br>
+        <input type="checkbox" name="cbEmotions[]" id="cbConfused" value="Confusion">Confusion <br>
+        <input type="checkbox" name="cbEmotions[]" id="cbFear" value="Fear">Fear <br>
+        <input type="checkbox" name="cbEmotions[]" id="cbSadness" value="Sadness">Sadness <br>
+        <input type="checkbox" name="cbEmotions[]" id="cbLoved" value="Loved">Loved <br><br>
+        <button id="btnPost">POST</button>
+    </fieldset>
+
+    <div style="float: left; margin-left: 100px; margin-top: 100px;">
+        <label>Date: </label>
+        <p id="userDate"></p> <!--User date-->
+        <label>Name: </label>
+        <p id="userName"></p> <!--User name-->
+        <label>What's on your mind? </label>
+        <p id="userThoughts"></p> <!--User thoughts-->
+        <label>Emotion list: </label>
+        <ul id="emotionList"></ul>
+    </div>
+
+
+
+    <script>
+        let userDate = document.getElementById("txtDate");
+        let userName = document.getElementById("txtName");
+        let userThought = document.getElementById("txtUserThoughts");
+        let emotions = document.getElementsByName("cbEmotions[]");
+        let emotionList = document.getElementById("emotionList");
+        let displayName = document.getElementById("userName");
+        let displayThoughts = document.getElementById("userThoughts");
+        let displayDate = document.getElementById("userDate");
+        let buttonPost = document.getElementById("btnPost");
+
+
+        buttonPost.addEventListener("click", function (){
+            getUserInputs();
+        });
+
+        //or 
+        // buttonPost.addEventListener("click", () =>{
+        //     getUserInputs();
+        // });
+        //or
+        // buttonPost.addEventListener("click", getUserInputs);
+
+
+        function getUserInputs() {
+
+            displayName.innerHTML = userName.value;
+            displayThoughts.innerHTML = userThought.value;
+            displayDate.innerHTML = userDate.value;
+
+            emotionList.innerHTML = ""; //to avoid duplicates
+
+            for (var i = 0; i < emotions.length; i++) {
+                if (emotions[i].checked) {
+                    emotionList.innerHTML += "<li> " + emotions[i].value + " </li>";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
